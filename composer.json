@@ -1,0 +1,13 @@
+{
+    "name": "pw_single_block_img",
+    "type": "drupal-module",
+    "description": "Provides paragraph contain title subtitle text and floating background",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/pw_single_block_img",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/pw_single_block_img",
+        "source": "http://cgit.drupalcode.org/pw_single_block_img",
+    },
+}

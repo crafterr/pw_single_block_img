@@ -1,0 +1,19 @@
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pw_single_block_img_list
+    - paragraphs.paragraphs_type.pw_single_block_img
+  module:
+    - options
+id: paragraph.pw_single_block_img.field_pw_single_block_img_list
+field_name: field_pw_single_block_img_list
+entity_type: paragraph
+bundle: pw_single_block_img
+label: 'List Switch'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

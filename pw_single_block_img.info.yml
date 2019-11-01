@@ -1,0 +1,8 @@
+name: 'Pw Single Block Img'
+type: module
+description: 'Provides paragraph contain title subtitle text and floating background'
+core: 8.x
+package: 'PixelWeb'
+dependencies:
+  - pw
+  - svg_image

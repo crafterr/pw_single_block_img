@@ -1,0 +1,55 @@
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pw_single_block_img.field_pw_image
+    - field.field.paragraph.pw_single_block_img.field_pw_long_text
+    - field.field.paragraph.pw_single_block_img.field_pw_single_block_img_list
+    - field.field.paragraph.pw_single_block_img.field_pw_subtitle
+    - field.field.paragraph.pw_single_block_img.field_pw_title
+    - paragraphs.paragraphs_type.pw_single_block_img
+  module:
+    - svg_image
+    - text
+id: paragraph.pw_single_block_img.default
+targetEntityType: paragraph
+bundle: pw_single_block_img
+mode: default
+content:
+  field_pw_image:
+    weight: 0
+    label: hidden
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_pw_long_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_pw_subtitle:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pw_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_pw_single_block_img_list: true

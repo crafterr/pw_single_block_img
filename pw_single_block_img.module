@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Contains pw_single_block_img.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function pw_single_block_img_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the pw_single_block_img module.
+    case 'help.page.pw_single_block_img':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides paragraph contain title subtitle text and floating background') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pw_single_block_img_theme() {
+  return [
+    'field__paragraph__field_pw_title__pw_single_block_img' => [
+      'base hook' => 'field',
+    ],
+    'field__paragraph__field_pw_subtitle__pw_single_block_img' => [
+      'base hook' => 'field',
+    ],
+    'field__paragraph__field_pw_long_text__pw_single_block_img' => [
+      'base hook' => 'field',
+    ],
+    'field__paragraph__field_pw_image__pw_single_block_img' => [
+      'base hook' => 'field',
+    ],
+    'paragraph__pw_single_block_text' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function pw_single_block_img_preprocess_field(&$variables) {
+  if ($variables['element']['#entity_type'] == 'paragraph') {
+    if ($variables['element']['#bundle'] == 'pw_single_block_img') {
+      if ($variables['field_name'] == 'field_pw_image') {
+
+        $field_pw_single_block_img_list = $variables['element']['#object']->get('field_pw_single_block_img_list')->value;
+
+        $variables['field_pw_single_block_img_list'] = $field_pw_single_block_img_list;
+      }
+    }
+  }
+}

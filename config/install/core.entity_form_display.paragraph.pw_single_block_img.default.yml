@@ -1,0 +1,59 @@
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pw_single_block_img.field_pw_image
+    - field.field.paragraph.pw_single_block_img.field_pw_long_text
+    - field.field.paragraph.pw_single_block_img.field_pw_single_block_img_list
+    - field.field.paragraph.pw_single_block_img.field_pw_subtitle
+    - field.field.paragraph.pw_single_block_img.field_pw_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.pw_single_block_img
+  module:
+    - svg_image
+    - text
+id: paragraph.pw_single_block_img.default
+targetEntityType: paragraph
+bundle: pw_single_block_img
+mode: default
+content:
+  field_pw_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_pw_long_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_pw_single_block_img_list:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_pw_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pw_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

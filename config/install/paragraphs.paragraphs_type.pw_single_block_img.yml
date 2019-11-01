@@ -1,0 +1,7 @@
+status: true
+dependencies: {  }
+id: pw_single_block_img
+label: 'Pw Single Block Img'
+icon_uuid: null
+description: 'Provides paragraph contain title subtitle text and floating background'
+behavior_plugins: {  }
