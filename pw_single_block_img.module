@@ -40,7 +40,7 @@ function pw_single_block_img_theme() {
     'field__paragraph__field_pw_image__pw_single_block_img' => [
       'base hook' => 'field',
     ],
-    'paragraph__pw_single_block_text' => [
+    'paragraph__pw_single_block_img' => [
       'base hook' => 'paragraph',
     ],
   ];

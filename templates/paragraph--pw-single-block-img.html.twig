@@ -43,13 +43,16 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'pw_float_' ~paragraph.field_pw_single_block_img_list.value
 ]
 %}
 {% block paragraph %}
-    <div{{ attributes.addClass(classes) }}>
+<section {{ wrapper_attributes.addClass(classes) }}>
+    <div{{ attributes }}>
         {% block content %}
             {{ content }}
         {% endblock %}
     </div>
+</section>
 {% endblock paragraph %}
